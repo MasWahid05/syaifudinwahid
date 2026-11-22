@@ -273,7 +273,7 @@ main{position:relative;z-index:1}
 </main>
 <div class="toast" id="toast" role="status" aria-live="polite">Link copied ✓</div>
 
-<script src="https://maswahid05.github.io/atlet-coach-wahid/data.js"></script>
+<script src="https://atlet-coach-wahid.vercel.app/data.js"></script>
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();
 
@@ -299,7 +299,7 @@ if (!reduce) {
 
 // ===== Atlet binaan (data dari atlet/data.js) =====
 (function () {
-  const WEB = 'https://atlet-coach-wahid.vercel.app/', IMG = 'https://maswahid05.github.io/atlet-coach-wahid/';
+  const WEB = 'https://atlet-coach-wahid.vercel.app/', IMG = 'https://atlet-coach-wahid.vercel.app/';
   const box = document.getElementById('ath'); const L = window.ATLET || [];
   const e = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   box.innerHTML = L.map(a => { const m = a.prestasi.filter(p => p.medali).length;
