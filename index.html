@@ -129,6 +129,9 @@ body.shown .disc-track{animation:mq 28s linear infinite}
 .all-ath:hover{text-decoration:underline}
 .share{justify-self:center;display:inline-flex;align-items:center;gap:.5rem;min-height:46px;padding:.6rem 1.3rem;border-radius:999px;border:1px solid var(--line);background:var(--card);font:600 .9rem var(--sans);color:var(--ink);cursor:pointer;margin-top:8px}
 .share:hover{border-color:var(--gold2)}
+/* tombol login admin */
+.login{position:fixed;z-index:50;top:14px;right:14px;min-height:38px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font:600 .82rem var(--sans);color:var(--ink);cursor:pointer;letter-spacing:.02em;box-shadow:0 6px 18px -10px rgba(0,0,0,.35)}
+.login:hover{border-color:var(--gold2)}.login.is-admin{background:#111827;color:#fff;border-color:#111827}
 footer{text-align:center;color:var(--mut);font-size:.82rem;margin-top:6px}
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--ink);color:#fff;padding:.7rem 1.2rem;border-radius:999px;font-weight:600;font-size:.88rem;transition:transform .35s;z-index:50}
 .toast.on{transform:translate(-50%,0)}
@@ -206,6 +209,7 @@ main{position:relative;z-index:1}
 </head>
 <body>
 <script>document.documentElement.classList.add('js')</script>
+<button class="login" type="button" data-cms-login aria-label="Login admin">Login</button>
 <div class="curtain" aria-hidden="true"><div class="mono">
   <svg viewBox="0 0 120 120"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e8c27a"/><stop offset=".5" stop-color="#b3262d"/><stop offset="1" stop-color="#c08f3e"/></linearGradient></defs><circle class="ring" cx="60" cy="60" r="52"/><text x="60" y="76" text-anchor="middle">SW</text></svg>
   <span class="bar"></span></div></div>
@@ -274,7 +278,9 @@ main{position:relative;z-index:1}
 </main>
 <div class="toast" id="toast" role="status" aria-live="polite">Link copied ✓</div>
 
+<script src="cms/cms.js?v=1" data-site="profil"></script>
 <script>
+(window.cmsReady||Promise.resolve()).then(()=>{
 document.getElementById('yr').textContent = new Date().getFullYear();
 
 // Potret 3D: animasi pembuka 3 detik, lalu miring mengikuti jari/mouse & bergoyang halus saat diam
@@ -372,6 +378,7 @@ document.getElementById('share').onclick = async () => {
   const data = { title: 'Coach Syaifudin Wahid, M.Pd', text: 'Coach Syaifudin Wahid — Swimming & Athletics Coach', url: location.href };
   try { if (navigator.share) return await navigator.share(data); await navigator.clipboard.writeText(location.href); toast.classList.add('on'); setTimeout(() => toast.classList.remove('on'), 2000); } catch { }
 };
+});
 </script>
 </body>
 </html>
