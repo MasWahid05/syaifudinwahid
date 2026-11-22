@@ -148,7 +148,7 @@ body.shown .card3d{animation:none;opacity:1}
   <div class="stats rv" style="animation-delay:2.1s">
     <div><b>7</b><small>Level swim<br>program</small></div>
     <div><b>4</b><small>Training days<br>per week</small></div>
-    <div><b>7+</b><small>Interactive<br>PE lessons</small></div>
+    <div><b>3</b><small>Track<br>specialties</small></div>
   </div>
 
   <div class="disc rv" style="animation-delay:2.15s" aria-label="Disiplin yang dilatih"><div class="disc-track">
@@ -177,27 +177,12 @@ body.shown .card3d{animation:none;opacity:1}
     <a class="link rv" style="animation-delay:2.4s;--c:#fff4d6" href="https://pjokmaswahid.vercel.app/" target="_blank" rel="noopener"><span class="ic">🏠</span><span class="tx"><b>PENJASKU</b><small>The PE hub — videos, motion animations, quizzes &amp; games for grades 1–9</small></span><span class="kls">PE Hub</span></a>
   </div>
 
-  <div class="sec rv" style="animation-delay:2.5s">Interactive PE lessons</div>
-  <div class="links" id="mpi"></div>
-
   <button class="share rv" style="animation-delay:2.8s" id="share" type="button">↗ Share this profile</button>
   <footer>© <span id="yr">2026</span> Coach Syaifudin Wahid, M.Pd · Swim · Sprint · Endure</footer>
 </main>
 <div class="toast" id="toast" role="status" aria-live="polite">Link copied ✓</div>
 
 <script>
-// Daftar media ajar — tambah satu baris untuk web baru
-const MPI = [
-  { judul: 'Energi Super', ket: 'Fitness challenge · power up your body', kelas: 'Grade 6', ikon: '⚡', warna: '#fff4d6', url: 'https://maswahid05.github.io/Mpikebugaranjasmanivi/' },
-  { judul: 'Petualangan Tubuh Bugar', ket: 'Fitness adventure for young movers', kelas: 'Grade 4', ikon: '💪', warna: '#e6f6ea', url: 'https://maswahid05.github.io/Mpikebugaranjasmani/' },
-  { judul: 'Gerak Lokomotor', ket: 'Run, hop, skip — fundamental movement', kelas: 'Grade 1', ikon: '🏃', warna: '#e9f3ff', url: 'https://maswahid05.github.io/Mpilokomotorkelas1/' },
-  { judul: 'Bola Basket', ket: 'Basketball fundamentals', kelas: 'Grade 7', ikon: '🏀', warna: '#ffeede', url: 'https://maswahid05.github.io/Mpibasketkelas7/' },
-  { judul: 'Bola Basket', ket: 'Basketball skills & tactics', kelas: 'Grade 8', ikon: '🏀', warna: '#ffeede', url: 'https://maswahid05.github.io/Mpibasketkelas8/' },
-  { judul: 'Liga Basket', ket: 'Game day — team play & strategy', kelas: 'Grade 9', ikon: '🏆', warna: '#ffeede', url: 'https://maswahid05.github.io/Mpibasketkelas9/' },
-  { judul: 'Mesin Waktu Basket', ket: 'Time machine — the story of basketball', kelas: 'Junior High', ikon: '⏳', warna: '#f1ebff', url: 'https://maswahid05.github.io/Mpisejarahbasket/' }
-];
-const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-document.getElementById('mpi').innerHTML = MPI.map((m, i) => `<a class="link rv" style="animation-delay:${2.6 + i * .06}s;--c:${m.warna}" href="${esc(m.url)}" target="_blank" rel="noopener"><span class="ic">${m.ikon}</span><span class="tx"><b>${esc(m.judul)}</b><small>${esc(m.ket)}</small></span><span class="kls">${esc(m.kelas)}</span></a>`).join('');
 document.getElementById('yr').textContent = new Date().getFullYear();
 
 // Potret 3D: animasi pembuka 3 detik, lalu miring mengikuti jari/mouse & bergoyang halus saat diam
