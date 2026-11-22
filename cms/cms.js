@@ -140,6 +140,7 @@
   function boot() {
     injectUiCss();
     const doors = [...document.querySelectorAll('[data-cms-login]')];
+    doors.forEach(d => ['pointerenter', 'touchstart', 'focus'].forEach(ev => d.addEventListener(ev, () => initFirebase().catch(() => { }), { once: true, passive: true })));
     doors.forEach(d => d.addEventListener('click', e => { e.preventDefault(); if (editing) return; isAdmin() ? openMore() : (mountLauncher(), login()); }));
     if (SHOW_LOGIN || qs.has('admin') || store.get('cms_admin')) mountLauncher();
     if (doors.length && !qs.has('admin') && !store.get('cms_admin')) return;
@@ -150,12 +151,14 @@
     const b = el('button', 'cms-ui cms-door', '🔒'); b.title = 'Admin'; b.setAttribute('aria-label', 'Login admin');
     b.onclick = () => { b.remove(); mountLauncher(); }; document.body.appendChild(b);
   }
-  async function initFirebase() {
-    if (F) return F;
+  let FP = null;
+  function initFirebase() { return FP ??= initFb().catch(e => { FP = null; throw e; }); }
+  async function initFb() {
     const G = 'https://www.gstatic.com/firebasejs/10.12.2/';
     const [A, FA, FS] = await Promise.all([import(G + 'firebase-app.js'), import(G + 'firebase-auth.js'), import(G + 'firebase-firestore.js')]);
     const app = A.getApps().find(a => a.name === 'cms') || A.initializeApp(CFG, 'cms');
     F = { FA, FS, auth: FA.getAuth(app), db: FS.getFirestore(app) };
+    try { await FA.getRedirectResult(F.auth); } catch (e) { console.warn('CMS redirect:', e.code); }
     await new Promise(res => { const un = FA.onAuthStateChanged(F.auth, u => { user = u; un(); res(); }); });
     FA.onAuthStateChanged(F.auth, u => { user = u; render(); });
     return F;
@@ -164,7 +167,9 @@
     try {
       await initFirebase();
       const prov = new F.FA.GoogleAuthProvider(); prov.setCustomParameters({ login_hint: ADMIN, prompt: 'select_account' });
-      const r = await F.FA.signInWithPopup(F.auth, prov);
+      let r;
+      try { r = await F.FA.signInWithPopup(F.auth, prov); }
+      catch (e) { if (/popup-blocked|operation-not-supported|web-storage/.test(e.code || '')) { store.set('cms_admin', '1'); return F.FA.signInWithRedirect(F.auth, prov); } throw e; }
       if (r.user.email !== ADMIN) { await F.FA.signOut(F.auth); toast('Akun ' + r.user.email + ' bukan admin.', true); return; }
       store.set('cms_admin', '1'); toast('Masuk sebagai admin ✓'); render();
     } catch (e) { if (!/popup-closed|cancelled/.test(e.code || '')) toast(e.code === 'auth/unauthorized-domain' ? 'Domain ini belum diizinkan di Firebase.' : 'Gagal login: ' + (e.message || e), true); }
