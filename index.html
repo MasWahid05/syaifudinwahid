@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Syaifudin Wahid, M.Pd — Guru PJOK</title>
-<meta name="description" content="Semua tautan Syaifudin Wahid, M.Pd: web PJOK dan media pembelajaran interaktif untuk kelas 1, 6, 7, 8, dan 9.">
+<meta name="description" content="Profil dan tautan Syaifudin Wahid, M.Pd, guru PJOK.">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Syaifudin Wahid, M.Pd">
-<meta property="og:description" content="Guru PJOK · Web PJOK & media pembelajaran interaktif">
+<meta property="og:description" content="Guru PJOK · Profil & tautan">
 <meta property="og:url" content="https://maswahid05.github.io/syaifudinwahid/">
 <meta name="theme-color" content="#2E6FD8">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%232E6FD8'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='800' font-size='26' fill='%23FFD23F'>SW</text></svg>">
@@ -89,7 +89,7 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;margin-top:28px}
     <div class="avatar" role="img" aria-label="Inisial SW">SW</div><!-- GANTI: bisa diganti <img> foto profil -->
     <h1>Syaifudin Wahid, M.Pd</h1>
     <p class="role">Guru PJOK · Pembuat media pembelajaran interaktif</p>
-    <div class="tags"><span class="tag"><b>PJOK</b> SD–SMP</span><span class="tag">Kelas 1 · 6 · 7 · 8 · 9</span></div>
+    <div class="tags"><span class="tag"><b>PJOK</b> SD–SMP</span></div>
   </header>
 
   <h2 class="reveal" style="animation-delay:.08s">Web utama</h2>
@@ -101,7 +101,7 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;margin-top:28px}
     </a>
   </div>
 
-  <h2 class="reveal" style="animation-delay:.16s">Media pembelajaran interaktif</h2>
+  <h2 class="reveal" id="lainnya-judul" style="animation-delay:.16s" hidden>Web lainnya</h2>
   <div class="links" id="mpi"></div>
 
   <div class="share reveal" style="animation-delay:.5s">
@@ -115,14 +115,12 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;margin-top:28px}
 <div class="toast" id="toast" role="status" aria-live="polite">Tautan disalin</div>
 
 <script>
-// Daftar media pembelajaran — tambah baris baru di sini bila ada web baru.
+// Daftar "Web lainnya" — masih kosong. Tambah satu baris per web, contoh:
+// { judul: "Nama web", ket: "Keterangan singkat", kelas: "Label", warna: "#2E6FD8", url: "https://...", ikon: "zap" },
+// (ikon: run / zap / ball). Bagian ini otomatis tampil bila daftarnya terisi.
 const MPI = [
-  { judul: "Gerak Lokomotor", ket: "Berjalan, berlari, melompat", kelas: "Kelas 1", warna: "#16a34a", url: "https://maswahid05.github.io/Mpilokomotorkelas1/", ikon: "run" },
-  { judul: "Energi Super", ket: "Kebugaran jasmani", kelas: "Kelas 6", warna: "#f59e0b", url: "https://maswahid05.github.io/Mpikebugaranjasmanivi/", ikon: "zap" },
-  { judul: "Bola Basket", ket: "Teknik dasar & permainan", kelas: "Kelas 7", warna: "#2E6FD8", url: "https://maswahid05.github.io/Mpibasketkelas7/", ikon: "ball" },
-  { judul: "Bola Basket", ket: "Teknik dasar & permainan", kelas: "Kelas 8", warna: "#0d9488", url: "https://maswahid05.github.io/Mpibasketkelas8/", ikon: "ball" },
-  { judul: "Bola Basket", ket: "Teknik dasar & permainan", kelas: "Kelas 9", warna: "#dc2626", url: "https://maswahid05.github.io/Mpibasketkelas9/", ikon: "ball" }
 ];
+document.getElementById("lainnya-judul").hidden = MPI.length === 0;
 const IKON = {
   run: '<circle cx="14" cy="4" r="2"/><path d="m7 21 3-6 3 2v5"/><path d="M6 12l3-4 4 1 3 3 3 1"/>',
   zap: '<path d="M13 2 3 14h9l-1 8 10-12h-9z"/>',
@@ -139,7 +137,7 @@ document.getElementById("mpi").innerHTML = MPI.map((m, i) => `
 document.getElementById("yr").textContent = new Date().getFullYear();
 const toast = document.getElementById("toast");
 document.getElementById("share").addEventListener("click", async () => {
-  const data = { title: "Syaifudin Wahid, M.Pd", text: "Web PJOK & media pembelajaran interaktif", url: location.href };
+  const data = { title: "Syaifudin Wahid, M.Pd", text: "Profil Syaifudin Wahid, M.Pd", url: location.href };
   try {
     if (navigator.share) { await navigator.share(data); return; }
     await navigator.clipboard.writeText(location.href);
