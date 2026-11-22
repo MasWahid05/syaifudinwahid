@@ -352,7 +352,10 @@
     for (const k of Object.keys(DOC.pages)) { const p = DOC.pages[k]; if (!Object.keys(p.t || {}).length && !Object.keys(p.h || {}).length && !Object.keys(p.i || {}).length && !(p.x || []).length && !Object.keys(p.o || {}).length) delete DOC.pages[k]; }
     const json = JSON.stringify(DOC);
     if (json.length > 950000) throw new Error('Data terlalu besar');
+    if (!user || user.email !== ADMIN) throw new Error('belum login sebagai admin');
     await F.FS.setDoc(F.FS.doc(F.db, 'cms', DOC_ID), { json, site: SITE, updatedAt: new Date().toISOString(), by: user.email });
+    const back = await readDoc().catch(() => null);   // pastikan benar-benar tersimpan di server
+    if (!back || JSON.stringify(back) !== json) throw new Error('server belum menerima data — periksa koneksi lalu coba lagi');
   }
   async function saveAll() {
     if (document.activeElement && document.activeElement.isContentEditable) document.activeElement.blur();
