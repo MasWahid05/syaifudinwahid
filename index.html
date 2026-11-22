@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Syaifudin Wahid, M.Pd — Guru PJOK</title>
+<meta name="description" content="Semua tautan Syaifudin Wahid, M.Pd: web PJOK dan media pembelajaran interaktif untuk kelas 1, 6, 7, 8, dan 9.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Syaifudin Wahid, M.Pd">
+<meta property="og:description" content="Guru PJOK · Web PJOK & media pembelajaran interaktif">
+<meta property="og:url" content="https://maswahid05.github.io/syaifudinwahid/">
+<meta name="theme-color" content="#2E6FD8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%232E6FD8'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='800' font-size='26' fill='%23FFD23F'>SW</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#2E6FD8; --brand-dark:#14224A; --accent:#FFD23F; --red:#FF5A5F;
+  --bg:#eef3fc; --surface:#ffffff; --line:#dbe4f3; --text:#14224A; --muted:#5a6886;
+  --shadow:0 1px 2px rgb(20 34 74/.06),0 12px 32px rgb(20 34 74/.10);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --brand:#6ea0f0; --bg:#0b1222; --surface:#131d33; --line:#22314f; --text:#eaf0fb; --muted:#9aaccb;
+  --shadow:0 1px 2px rgb(0 0 0/.4),0 12px 32px rgb(0 0 0/.35); color-scheme:dark}}
+:root[data-theme="dark"]{--brand:#6ea0f0; --bg:#0b1222; --surface:#131d33; --line:#22314f; --text:#eaf0fb; --muted:#9aaccb;
+  --shadow:0 1px 2px rgb(0 0 0/.4),0 12px 32px rgb(0 0 0/.35); color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.bg::before{content:"";position:absolute;top:-30vh;left:50%;transform:translateX(-50%);width:140vw;max-width:1200px;height:70vh;background:radial-gradient(closest-side,color-mix(in srgb,var(--brand) 30%,transparent),transparent)}
+.bg::after{content:"";position:absolute;bottom:-20vh;right:-10vw;width:60vw;max-width:520px;aspect-ratio:1;background:radial-gradient(closest-side,color-mix(in srgb,var(--accent) 28%,transparent),transparent)}
+main{width:min(480px,100% - 32px);margin:0 auto;padding:48px 0 40px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:12px}
+
+/* Profil */
+.profile{text-align:center}
+.avatar{position:relative;width:112px;height:112px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(140deg,var(--brand) 0%,#1f4fa8 60%,var(--brand-dark) 100%);color:var(--accent);
+  font-weight:800;font-size:2.5rem;letter-spacing:-.02em;box-shadow:0 0 0 5px var(--surface),0 0 0 7px var(--accent),var(--shadow)}
+.avatar::after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 30% 22%,rgb(255 255 255/.35),transparent 45%)}
+h1{font-size:1.65rem;line-height:1.2;margin:0;letter-spacing:-.02em}
+.role{margin:6px 0 0;color:var(--muted);font-weight:500}
+.tags{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tag{font-size:.8rem;font-weight:700;padding:5px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--muted)}
+.tag b{color:var(--brand)}
+
+/* Tautan */
+h2{font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:36px 4px 12px}
+.links{display:grid;gap:12px}
+.link{display:flex;align-items:center;gap:14px;min-height:72px;padding:12px 16px 12px 12px;text-decoration:none;color:inherit;
+  background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:0 1px 2px rgb(20 34 74/.04);
+  transition:transform .2s,box-shadow .2s,border-color .2s}
+.link:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--brand) 45%,var(--line))}
+.link:active{transform:translateY(-1px)}
+.ic{flex:none;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;color:#fff;background:var(--c,var(--brand))}
+.tx{flex:1;min-width:0}
+.tx b{display:block;font-size:1rem;line-height:1.3}
+.tx small{display:block;color:var(--muted);font-size:.85rem;margin-top:2px}
+.arr{flex:none;color:var(--muted);transition:transform .2s}
+.link:hover .arr{transform:translateX(3px);color:var(--brand)}
+.feature{background:linear-gradient(135deg,var(--brand),#1f4fa8);border:0;color:#fff;min-height:88px}
+.feature .ic{background:var(--accent);color:var(--brand-dark)}
+.feature .tx small,.feature .arr{color:rgb(255 255 255/.8)}
+.feature:hover .arr{color:var(--accent)}
+.kls{flex:none;font-size:.72rem;font-weight:800;padding:4px 9px;border-radius:8px;background:color-mix(in srgb,var(--c) 14%,transparent);color:var(--c)}
+
+/* Bagikan & footer */
+.share{display:flex;justify-content:center;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 20px;border-radius:999px;border:1px solid var(--line);
+  background:var(--surface);color:var(--text);font:inherit;font-weight:700;cursor:pointer;transition:transform .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--brand)}
+footer{text-align:center;color:var(--muted);font-size:.82rem;margin-top:28px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);opacity:0;background:var(--brand-dark);color:#fff;
+  padding:10px 18px;border-radius:999px;font-weight:600;font-size:.9rem;transition:.3s;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+.reveal{opacity:0;transform:translateY(14px);animation:up .6s ease forwards}
+@keyframes up{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<main>
+  <header class="profile reveal">
+    <div class="avatar" role="img" aria-label="Inisial SW">SW</div><!-- GANTI: bisa diganti <img> foto profil -->
+    <h1>Syaifudin Wahid, M.Pd</h1>
+    <p class="role">Guru PJOK · Pembuat media pembelajaran interaktif</p>
+    <div class="tags"><span class="tag"><b>PJOK</b> SD–SMP</span><span class="tag">Kelas 1 · 6 · 7 · 8 · 9</span></div>
+  </header>
+
+  <h2 class="reveal" style="animation-delay:.08s">Web utama</h2>
+  <div class="links">
+    <a class="link feature reveal" style="animation-delay:.12s" href="https://maswahid05.github.io/pjokmaswahid/" target="_blank" rel="noopener">
+      <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></svg></span>
+      <span class="tx"><b>Web PJOK Mas Wahid</b><small>Profil guru & semua materi per kelas</small></span>
+      <svg class="arr" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    </a>
+  </div>
+
+  <h2 class="reveal" style="animation-delay:.16s">Media pembelajaran interaktif</h2>
+  <div class="links" id="mpi"></div>
+
+  <div class="share reveal" style="animation-delay:.5s">
+    <button class="btn" id="share" type="button">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
+      Bagikan halaman ini
+    </button>
+  </div>
+  <footer>© <span id="yr"></span> Syaifudin Wahid, M.Pd</footer>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite">Tautan disalin</div>
+
+<script>
+// Daftar media pembelajaran — tambah baris baru di sini bila ada web baru.
+const MPI = [
+  { judul: "Gerak Lokomotor", ket: "Berjalan, berlari, melompat", kelas: "Kelas 1", warna: "#16a34a", url: "https://maswahid05.github.io/Mpilokomotorkelas1/", ikon: "run" },
+  { judul: "Energi Super", ket: "Kebugaran jasmani", kelas: "Kelas 6", warna: "#f59e0b", url: "https://maswahid05.github.io/Mpikebugaranjasmanivi/", ikon: "zap" },
+  { judul: "Bola Basket", ket: "Teknik dasar & permainan", kelas: "Kelas 7", warna: "#2E6FD8", url: "https://maswahid05.github.io/Mpibasketkelas7/", ikon: "ball" },
+  { judul: "Bola Basket", ket: "Teknik dasar & permainan", kelas: "Kelas 8", warna: "#0d9488", url: "https://maswahid05.github.io/Mpibasketkelas8/", ikon: "ball" },
+  { judul: "Bola Basket", ket: "Teknik dasar & permainan", kelas: "Kelas 9", warna: "#dc2626", url: "https://maswahid05.github.io/Mpibasketkelas9/", ikon: "ball" }
+];
+const IKON = {
+  run: '<circle cx="14" cy="4" r="2"/><path d="m7 21 3-6 3 2v5"/><path d="M6 12l3-4 4 1 3 3 3 1"/>',
+  zap: '<path d="M13 2 3 14h9l-1 8 10-12h-9z"/>',
+  ball: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3v18"/><path d="M5.6 5.6c3.5 3.5 3.5 9.3 0 12.8M18.4 5.6c-3.5 3.5-3.5 9.3 0 12.8"/>'
+};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+document.getElementById("mpi").innerHTML = MPI.map((m, i) => `
+  <a class="link reveal" style="--c:${m.warna};animation-delay:${0.2 + i * 0.06}s" href="${esc(m.url)}" target="_blank" rel="noopener">
+    <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IKON[m.ikon]}</svg></span>
+    <span class="tx"><b>${esc(m.judul)}</b><small>${esc(m.ket)}</small></span>
+    <span class="kls">${esc(m.kelas)}</span>
+  </a>`).join("");
+
+document.getElementById("yr").textContent = new Date().getFullYear();
+const toast = document.getElementById("toast");
+document.getElementById("share").addEventListener("click", async () => {
+  const data = { title: "Syaifudin Wahid, M.Pd", text: "Web PJOK & media pembelajaran interaktif", url: location.href };
+  try {
+    if (navigator.share) { await navigator.share(data); return; }
+    await navigator.clipboard.writeText(location.href);
+    toast.classList.add("on"); setTimeout(() => toast.classList.remove("on"), 1800);
+  } catch (e) {}
+});
+</script>
+</body>
+</html>
