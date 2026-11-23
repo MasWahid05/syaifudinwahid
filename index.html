@@ -172,7 +172,8 @@ h2.sec{font:700 .72rem var(--sans);margin:14px 4px 0}
 .pmore{justify-self:center;font-weight:700;color:var(--wine);text-decoration:none;font-size:.9rem}
 .pmore:hover{text-decoration:underline}
 /* ===== testimoni ===== */
-.testi{display:grid;gap:12px}
+.testi{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;margin:0 -2px;scrollbar-width:thin;scrollbar-color:var(--gold2) transparent;-webkit-overflow-scrolling:touch}
+.testi .tq{flex:0 0 86%;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:space-between}
 .tq{position:relative;margin:0;padding:18px 18px 16px 18px;border-radius:22px;background:var(--card);border:1px solid var(--line);box-shadow:0 10px 24px -22px rgba(60,20,20,.6)}
 .tq:before{content:"\201C";position:absolute;right:16px;top:-6px;font:italic 600 4.2rem/1 var(--serif);color:var(--gold2);opacity:.6}
 .tq p{margin:0;font:italic 500 1.02rem/1.55 var(--serif);color:var(--ink);padding-right:28px}
@@ -394,6 +395,13 @@ const KONTAK = {
 // Testimoni — hanya dengan izin; cukup nama depan + peran.
 const TESTIMONI = [
   // { teks: '…', nama: 'Ibu Rina', peran: 'Orang tua perenang Level 3' },
+  { teks: 'Dulu tiap lomba aku sering habis di tengah jalan. Sama Coach Wahid aku belajar ngatur pace, kapan nahan, kapan nambah. Pas POPDA kemarin akhirnya bisa naik podium, seneng banget.', nama: 'Afika', peran: 'Atlet 800m/1500m · SuperNova Atletik' },
+  { teks: 'Latihannya nggak asal lari jauh. Tiap minggu ada targetnya, jadi kerasa banget progresnya. Pas KNPI Run aku lari lebih tenang, dan ternyata bisa juara.', nama: 'Aydin', peran: 'Atlet 5K · SuperNova Atletik' },
+  { teks: 'Coach paling sering benerin start sama ayunan tangan aku. Awalnya kelihatan sepele, tapi pengaruhnya besar banget ke waktu. Sekarang aku lebih pede tiap turun di 100m.', nama: 'Raphael', peran: 'Sprinter 100m · SuperNova Atletik' },
+  { teks: 'Yang saya suka, Coach Wahid nggak cuma ngejar medali. Anak saya jadi lebih disiplin, tidurnya teratur, makannya juga dijaga. Prestasinya ikut naik.', nama: 'Orang tua atlet', peran: 'SuperNova Atletik' },
+  { teks: 'Awalnya anak saya nangis kalau mukanya kena air. Coach sabar banget, pelan-pelan diajak main dulu. Sekarang malah dia yang minta cepat-cepat ke kolam tiap jadwal latihan.', nama: 'Orang tua perenang', peran: 'Level pemula · Victoria Swimming Club' },
+  { teks: 'Saya mulai belajar renang di umur segini dan sempat minder. Ternyata latihannya santai tapi jelas tahapannya. Sekarang saya sudah bisa gaya bebas satu kolam tanpa berhenti.', nama: 'Perenang dewasa', peran: 'Victoria Swimming Club' },
+  { teks: 'Enaknya ada paspor progresnya, jadi saya bisa lihat anak saya sudah sampai mana. Coach juga rutin kasih masukan habis latihan.', nama: 'Orang tua perenang', peran: 'Level lanjut · Victoria Swimming Club' },
 ];
 // =======================================================
 </script>
