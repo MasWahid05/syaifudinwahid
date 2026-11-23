@@ -192,7 +192,7 @@ h2.sec{font:700 .72rem var(--sans);margin:14px 4px 0}
 .qbtn{display:inline-flex;align-items:center;gap:.4rem;min-height:40px;padding:.4rem 1rem;border-radius:999px;border:1px solid var(--line);background:var(--bg);font:600 .82rem var(--sans);color:var(--ink);cursor:pointer}
 .qbtn:hover{border-color:var(--gold2)}
 /* ===== penghitung pengunjung ===== */
-#visits{justify-self:center;display:inline-flex;align-items:center;gap:.55rem;margin:6px 0 0;padding:.5rem 1.1rem;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:.86rem;font-weight:600;color:var(--mut);box-shadow:0 10px 22px -18px rgba(60,20,20,.6)}
+#visits{justify-self:center;display:inline-flex;align-items:center;gap:.55rem;margin:-4px 0 0;padding:.5rem 1.1rem;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:.86rem;font-weight:600;color:var(--mut);box-shadow:0 10px 22px -18px rgba(60,20,20,.6)}
 #visits b{font:600 1.15rem/1 var(--serif);color:var(--wine);font-variant-numeric:tabular-nums}
 .vdot{width:8px;height:8px;border-radius:50%;background:#1faa59;box-shadow:0 0 0 0 rgba(31,170,89,.5);animation:vping 2s ease-out infinite}
 @keyframes vping{70%{box-shadow:0 0 0 8px rgba(31,170,89,0)}100%{box-shadow:0 0 0 0 rgba(31,170,89,0)}}
@@ -304,6 +304,9 @@ main{position:relative;z-index:1}
     <div class="tags"><span>📘 Physical Education Teacher</span><span>🏊 Swimming Coach · Victoria</span><span>🏃 Athletics Coach · PASI Kota Tangerang</span><span>💡 EdTech Creator</span><span>📊 Coach Planner</span><span>🎬 Content Creator</span></div>
   </div>
 
+  <!-- Penghitung pengunjung (Firestore stats/profil, mulai 148). Tersembunyi bila belum bisa dibaca. -->
+  <p id="visits" data-kosong aria-live="polite"><span class="vdot"></span><b id="vnum">148</b> profile visits</p>
+
   <!-- KONTAK: isi di objek KONTAK pada skrip paling bawah. Yang kosong otomatis disembunyikan. -->
   <nav id="kontak" class="rv" aria-label="Kontak dan media sosial">
     <a class="chat" data-k="wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"/></svg>Chat Coach</a>
@@ -327,7 +330,7 @@ main{position:relative;z-index:1}
   <div class="links">
     <a class="link feature rv" style="animation-delay:2.2s" href="https://victoria-swimming-club.vercel.app/" target="_blank" rel="noopener"><span class="ic" style="background:#fff"><img src="assets/victoria-icon.png" alt="" width="40" height="40"></span><span class="tx"><b>Victoria Swimming Club</b><small>Head Coach · From first splash to race-ready — 7-level program, progress passport &amp; online booking</small></span><span class="ar">↗</span></a>
     <a class="link club rv" style="animation-delay:2.22s" href="https://supernova-atletik-tangerang.vercel.app/" target="_blank" rel="noopener"><span class="ic" style="background:#fff;border-radius:50%"><img src="assets/supernova-logo.webp" alt="" width="46" height="46" style="width:46px;height:46px;border-radius:50%"></span><span class="tx"><b>SuperNova Atletik Tangerang</b><small>Athletics club · Sprint, middle &amp; long distance squad — athlete profiles, PBs &amp; medals</small></span><span class="ar">↗</span></a>
-    <a class="link rv" style="animation-delay:2.24s;--c:#fff4d6" href="https://pjokmaswahid.vercel.app/" target="_blank" rel="noopener"><span class="ic">🏠</span><span class="tx"><b>PENJASKU</b><small>Interactive PE learning platform for elementary &amp; junior high students — videos, motion animations, quizzes &amp; games</small></span><span class="kls">PE Hub</span></a>
+    <a class="link rv" style="animation-delay:2.24s;--c:#fff4d6" href="https://pjokmaswahid.vercel.app/" target="_blank" rel="noopener"><span class="ic" style="background:#fff;border-radius:50%"><img src="assets/penjasku-logo.webp" alt="" width="46" height="46" style="width:46px;height:46px;border-radius:50%"></span><span class="tx"><b>PENJASKU</b><small>Interactive PE learning platform for elementary &amp; junior high students — videos, motion animations, quizzes &amp; games</small></span><span class="kls">PE Hub</span></a>
     <a class="link planner rv" style="animation-delay:2.26s" href="https://coach-planner-alpha.vercel.app/" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 17l5-6 4 3.5L21 5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="tx"><b>Coach Planner</b><small>Annual training plan builder for coaches — auto phases, mesocycles, load charts &amp; linked Excel export</small></span><span class="kls">New</span></a>
   </div>
 
@@ -383,8 +386,6 @@ main{position:relative;z-index:1}
     </div>
   </aside>
 
-  <!-- Penghitung pengunjung (Firestore stats/profil, mulai 148). Tersembunyi bila belum bisa dibaca. -->
-  <p id="visits" data-kosong aria-live="polite"><span class="vdot"></span><b id="vnum">148</b> profile visits</p>
 
   <button class="share rv" style="animation-delay:2.8s" id="share" type="button">↗ Share this profile</button>
   <footer>© <span id="yr">2026</span> Syaifudin Wahid, M.Pd · Coach · Teacher · Creator</footer>
