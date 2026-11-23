@@ -8,8 +8,17 @@
 <meta name="theme-color" content="#fbf7f1">
 <meta property="og:title" content="Coach Syaifudin Wahid — Swimming & Athletics Coach">
 <meta property="og:description" content="Swim · Sprint · Endure. Swimming &amp; track coaching — sprint, middle and long distance.">
-<meta property="og:image" content="assets/og.jpg">
+<meta property="og:image" content="https://syaifudinwahid.vercel.app/assets/og-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Coach Syaifudin Wahid, M.Pd — Swimming & Athletics Coach">
+<meta property="og:url" content="https://syaifudinwahid.vercel.app/">
+<meta property="og:site_name" content="Coach Syaifudin Wahid">
+<meta property="og:locale" content="id_ID">
 <meta property="og:type" content="profile">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://syaifudinwahid.vercel.app/assets/og-share.jpg">
+<link rel="canonical" href="https://syaifudinwahid.vercel.app/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23b3262d'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-style='italic' text-anchor='middle' fill='%23fff'%3ESW%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -129,6 +138,55 @@ body.shown .disc-track{animation:mq 28s linear infinite}
 .all-ath:hover{text-decoration:underline}
 .share{justify-self:center;display:inline-flex;align-items:center;gap:.5rem;min-height:46px;padding:.6rem 1.3rem;border-radius:999px;border:1px solid var(--line);background:var(--card);font:600 .9rem var(--sans);color:var(--ink);cursor:pointer;margin-top:8px}
 .share:hover{border-color:var(--gold2)}
+/* ===== kontak & media sosial ===== */
+#kontak{display:grid;justify-items:center;gap:12px;margin-top:-2px}
+.chat{display:inline-flex;align-items:center;gap:.6rem;min-height:52px;padding:.7rem 1.5rem .7rem 1.1rem;border-radius:999px;background:linear-gradient(135deg,#1faa59,#128c4a);color:#fff;font-weight:700;text-decoration:none;box-shadow:0 16px 30px -16px rgba(18,140,74,.85);transition:transform .2s}
+.chat:hover{transform:translateY(-2px)}
+.chat svg{width:24px;height:24px}
+.soc{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:0;padding:0;list-style:none}
+.soc a{display:grid;place-items:center;width:48px;height:48px;border-radius:16px;background:var(--card);border:1px solid var(--line);color:var(--ink);box-shadow:0 10px 22px -18px rgba(60,20,20,.6);transition:transform .2s,border-color .2s,color .2s}
+.soc a:hover{transform:translateY(-3px);border-color:var(--gold2);color:var(--wine)}
+.soc svg{width:22px;height:22px}
+[data-kosong]{display:none!important}
+/* ===== prestasi ===== */
+#prestasi,#testimoni,#qr{display:grid;gap:12px}
+h2.sec{font:700 .72rem var(--sans);margin:14px 4px 0}
+.tally{display:grid;grid-template-columns:1.25fr 1fr 1fr 1fr;gap:8px;padding:14px;border-radius:22px;background:linear-gradient(150deg,#1f1416,#3a1a1e);color:#fff;box-shadow:0 18px 34px -20px rgba(31,20,22,.85)}
+.tally div{text-align:center;display:grid;gap:4px;align-content:center}
+.tally b{font:600 2rem/1 var(--serif);font-variant-numeric:tabular-nums}
+.tally small{font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
+.tally .tot{border-right:1px solid rgba(255,255,255,.15);padding-right:6px}
+.tally .tot b{color:var(--gold2);font-size:2.4rem}
+.md-dot{width:14px;height:14px;border-radius:50%;margin:0 auto;box-shadow:inset 0 -2px 0 rgba(0,0,0,.2)}
+.md-dot.gold{background:radial-gradient(circle at 35% 30%,#fff3c4,#e0b13d 55%,#a87a16)}
+.md-dot.silver{background:radial-gradient(circle at 35% 30%,#fff,#c9ced6 55%,#8a919c)}
+.md-dot.bronze{background:radial-gradient(circle at 35% 30%,#ffe0c2,#cd8a4e 55%,#8c5326)}
+.wins{list-style:none;margin:0;padding:6px 16px;background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:0 10px 24px -22px rgba(60,20,20,.6)}
+.wins li{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px dashed var(--line)}
+.wins li:first-child{border-top:0}
+.wins .md-dot{flex:none;width:30px;height:30px;margin:0;display:grid;place-items:center;font:700 .72rem var(--sans);color:rgba(0,0,0,.55)}
+.wins div{flex:1;min-width:0}
+.wins b{display:block;font:600 .98rem/1.25 var(--serif)}
+.wins small{display:block;color:var(--mut);font-size:.8rem;line-height:1.35}
+.wins .yr{font:700 .72rem 'JetBrains Mono',ui-monospace,monospace;color:var(--gold)}
+.pmore{justify-self:center;font-weight:700;color:var(--wine);text-decoration:none;font-size:.9rem}
+.pmore:hover{text-decoration:underline}
+/* ===== testimoni ===== */
+.testi{display:grid;gap:12px}
+.tq{position:relative;margin:0;padding:18px 18px 16px 18px;border-radius:22px;background:var(--card);border:1px solid var(--line);box-shadow:0 10px 24px -22px rgba(60,20,20,.6)}
+.tq:before{content:"\201C";position:absolute;right:16px;top:-6px;font:italic 600 4.2rem/1 var(--serif);color:var(--gold2);opacity:.6}
+.tq p{margin:0;font:italic 500 1.02rem/1.55 var(--serif);color:var(--ink);padding-right:28px}
+.tq footer{margin:.7rem 0 0;text-align:left;display:flex;align-items:center;gap:.6rem;font-size:.82rem;color:var(--mut)}
+.tq footer b{color:var(--ink)}
+.tq .av{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#fdecea;color:var(--wine);font:600 .9rem var(--serif)}
+/* ===== kode QR ===== */
+.qrc{display:flex;gap:16px;align-items:center;padding:14px;border-radius:22px;background:var(--card);border:1px solid var(--line);box-shadow:0 10px 24px -22px rgba(60,20,20,.6)}
+.qrc .qbox{flex:none;width:116px;height:116px;padding:8px;border-radius:16px;background:#fff;border:1px solid var(--line)}
+.qrc .qbox svg{width:100%;height:100%;display:block}
+.qrc b{display:block;font:600 1.05rem/1.25 var(--serif)}
+.qrc small{display:block;color:var(--mut);font-size:.82rem;line-height:1.4;margin:.2rem 0 .6rem}
+.qbtn{display:inline-flex;align-items:center;gap:.4rem;min-height:40px;padding:.4rem 1rem;border-radius:999px;border:1px solid var(--line);background:var(--bg);font:600 .82rem var(--sans);color:var(--ink);cursor:pointer}
+.qbtn:hover{border-color:var(--gold2)}
 /* tombol login admin */
 .login{position:fixed;z-index:50;top:14px;right:14px;min-height:38px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font:600 .82rem var(--sans);color:var(--ink);cursor:pointer;letter-spacing:.02em;box-shadow:0 6px 18px -10px rgba(0,0,0,.35)}
 .login:hover{border-color:var(--gold2)}.login.is-admin{background:#111827;color:#fff;border-color:#111827}
@@ -237,6 +295,17 @@ main{position:relative;z-index:1}
     <div class="tags"><span>🏊 Swimming Coach</span><span>🏃 Athletics Coach · PASI Kota Tangerang</span><span>📘 Physical Education Teacher</span><span>💡 EdTech Creator</span></div>
   </div>
 
+  <!-- KONTAK: isi di objek KONTAK pada skrip paling bawah. Yang kosong otomatis disembunyikan. -->
+  <nav id="kontak" class="rv" aria-label="Kontak dan media sosial">
+    <a class="chat" data-k="wa" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"/></svg>Chat Coach</a>
+    <ul class="soc">
+      <li><a data-k="instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+      <li><a data-k="tiktok" href="#" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.4 2.2 1.9 3.8 4.1 4v3.1a7.6 7.6 0 0 1-4-1.2v6.3A6 6 0 1 1 10.6 9v3.2a2.9 2.9 0 1 0 2.9 2.9V3z"/></svg></a></li>
+      <li><a data-k="youtube" href="#" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.5 7.2a2.8 2.8 0 0 0-2-2C18.8 4.8 12 4.8 12 4.8s-6.8 0-8.5.4a2.8 2.8 0 0 0-2 2A29 29 0 0 0 1.1 12a29 29 0 0 0 .4 4.8 2.8 2.8 0 0 0 2 2c1.7.4 8.5.4 8.5.4s6.8 0 8.5-.4a2.8 2.8 0 0 0 2-2 29 29 0 0 0 .4-4.8 29 29 0 0 0-.4-4.8zM9.8 15V9l5.7 3z"/></svg></a></li>
+      <li><a data-k="email" href="#" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></a></li>
+    </ul>
+  </nav>
+
   <div class="sec rv" style="animation-delay:2.08s">Credentials</div>
   <ol class="cred rv" style="animation-delay:2.12s">
     <li><span class="ci" style="--c:#fdecea">🏃🏼</span><div><b>Athletics Coach</b><small>PASI Kota Tangerang · <a href="https://instagram.com/pasi_kotatangerang" target="_blank" rel="noopener">@pasi_kotatangerang</a></small></div><span class="ct">Coach</span></li>
@@ -272,14 +341,126 @@ main{position:relative;z-index:1}
     <div class="sp s3"><span class="em">🏔️</span><b>Long Distance</b><small>5K · 10K · Road</small><p>Aerobic engine, mental grit &amp; smart pacing.</p></div>
   </div>
 
+  <!-- PRESTASI: dihitung otomatis dari data atlet SuperNova (data.js); angka di bawah hanya cadangan -->
+  <section id="prestasi" aria-labelledby="prestasi-h">
+    <h2 class="sec rv" id="prestasi-h">Athlete results</h2>
+    <div class="tally rv" aria-label="Medali atlet binaan">
+      <div class="tot"><b data-n="total">19</b><small>Medals</small></div>
+      <div><span class="md-dot gold"></span><b data-n="gold">7</b><small>Gold</small></div>
+      <div><span class="md-dot silver"></span><b data-n="silver">5</b><small>Silver</small></div>
+      <div><span class="md-dot bronze"></span><b data-n="bronze">7</b><small>Bronze</small></div>
+    </div>
+    <ol class="wins rv" id="wins">
+      <li><span class="md-dot gold">1</span><div><b>Estafet 4×100m — Juara 1</b><small>Porprov VII Banten · Raphael</small></div><span class="yr">2026</span></li>
+      <li><span class="md-dot gold">1</span><div><b>100m — Juara 1</b><small>POPDA XII Banten · Raphael</small></div><span class="yr">2026</span></li>
+      <li><span class="md-dot gold">1</span><div><b>5K — Juara 1</b><small>KNPI Run · Aydin</small></div><span class="yr">2026</span></li>
+      <li><span class="md-dot gold">1</span><div><b>3000m — Juara 1</b><small>POPKOT Kota Tangerang · Syakira</small></div><span class="yr">2025</span></li>
+    </ol>
+    <a class="pmore rv" href="https://supernova-atletik-tangerang.vercel.app/" target="_blank" rel="noopener">See all athletes &amp; PBs →</a>
+  </section>
+
+  <!-- TESTIMONI: isi di larik TESTIMONI pada skrip paling bawah (dengan izin, cukup nama depan). Kosong = bagian disembunyikan. -->
+  <section id="testimoni" aria-labelledby="testi-h" data-kosong>
+    <h2 class="sec rv" id="testi-h">What parents &amp; athletes say</h2>
+    <div class="testi" id="testi"></div>
+  </section>
+
+  <aside id="qr" aria-labelledby="qr-h">
+    <h2 class="sec rv" id="qr-h">Scan &amp; share</h2>
+    <div class="qrc rv">
+      <div class="qbox" id="qbox" role="img" aria-label="Kode QR menuju syaifudinwahid.vercel.app"></div>
+      <div><b>Profile QR code</b><small>Print it on name cards, banners &amp; pool-side posters.</small><button class="qbtn" type="button" id="qdl">⬇ Download QR</button></div>
+    </div>
+  </aside>
+
 
   <button class="share rv" style="animation-delay:2.8s" id="share" type="button">↗ Share this profile</button>
   <footer>© <span id="yr">2026</span> Coach Syaifudin Wahid, M.Pd · Swim · Sprint · Endure</footer>
 </main>
 <div class="toast" id="toast" role="status" aria-live="polite">Link copied ✓</div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" defer></script>
+<script>
+// ===================== ISI DI SINI =====================
+// Kontak — kosongkan ('') bila tidak dipakai; tombolnya otomatis hilang.
+const KONTAK = {
+  wa: '',          // nomor WhatsApp format 62…, contoh '6281234567890'
+  waPesan: 'Halo Coach Wahid, saya ingin bertanya tentang latihan renang/atletik.',
+  instagram: '',   // nama akun tanpa @
+  tiktok: '',      // nama akun tanpa @
+  youtube: '',     // nama channel tanpa @
+  email: ''
+};
+// Testimoni — hanya dengan izin; cukup nama depan + peran.
+const TESTIMONI = [
+  // { teks: '…', nama: 'Ibu Rina', peran: 'Orang tua perenang Level 3' },
+];
+// =======================================================
+</script>
 <script src="cms/cms.js?v=3" data-site="profil"></script>
 <script>
+// ===== Kontak, testimoni, prestasi, QR =====
+(function isiKontak() {
+  const K = KONTAK, u = {
+    wa: K.wa && `https://wa.me/${K.wa.replace(/\D/g, '')}?text=${encodeURIComponent(K.waPesan || '')}`,
+    instagram: K.instagram && `https://instagram.com/${K.instagram.replace(/^@/, '')}`,
+    tiktok: K.tiktok && `https://www.tiktok.com/@${K.tiktok.replace(/^@/, '')}`,
+    youtube: K.youtube && `https://www.youtube.com/@${K.youtube.replace(/^@/, '')}`,
+    email: K.email && `mailto:${K.email}`
+  };
+  let ada = 0;
+  document.querySelectorAll('#kontak [data-k]').forEach(a => {
+    const v = u[a.dataset.k];
+    if (v) { a.href = v; ada++; } else (a.closest('li') || a).setAttribute('data-kosong', '');
+  });
+  if (!ada) document.getElementById('kontak').setAttribute('data-kosong', '');
+})();
+(function isiTestimoni() {
+  if (!TESTIMONI.length) return;
+  const box = document.getElementById('testi'), esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  box.innerHTML = TESTIMONI.map(t => `<blockquote class="tq rv"><p>${esc(t.teks)}</p><footer><span class="av">${esc((t.nama || '?').replace(/^(Ibu|Bapak|Pak|Bu)\s+/i, '')[0])}</span><span><b>${esc(t.nama)}</b> · ${esc(t.peran || '')}</span></footer></blockquote>`).join('');
+  document.getElementById('testimoni').removeAttribute('data-kosong');
+})();
+// Prestasi: hitung ulang dari data atlet SuperNova bila bisa dimuat
+const prestasiSiap = new Promise(res => {
+  const s = document.createElement('script'); s.src = 'https://supernova-atletik-tangerang.vercel.app/data.js?t=' + Math.floor(Date.now() / 36e5);
+  s.onload = () => {
+    try {
+      const A = window.ATLET || []; if (!A.length) return res();
+      const all = A.flatMap(a => (a.prestasi || []).map(p => ({ ...p, siapa: a.panggilan || a.nama.split(' ')[0] })));
+      const n = { gold: 0, silver: 0, bronze: 0 }; all.forEach(p => n[p.medali] != null && n[p.medali]++);
+      n.total = n.gold + n.silver + n.bronze;
+      document.querySelectorAll('#prestasi [data-n]').forEach(b => b.textContent = n[b.dataset.n]);
+      const rank = { gold: 0, silver: 1, bronze: 2 }, lv = e => /porprov/i.test(e) ? 0 : /popda|popnas|kejurnas/i.test(e) ? 1 : 2;
+      // estafet: satu tim = satu baris (nama digabung)
+      const grup = {}; all.forEach(p => { const k = p.tahun + p.event + p.nomor + p.hasil; grup[k] ? grup[k].siapa += ' & ' + p.siapa : grup[k] = { ...p }; });
+      const top = Object.values(grup).filter(p => p.medali === 'gold' || p.medali === 'silver').sort((a, b) => b.tahun - a.tahun || rank[a.medali] - rank[b.medali] || lv(a.event) - lv(b.event)).slice(0, 4);
+      const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+      if (top.length) document.getElementById('wins').innerHTML = top.map(p => `<li><span class="md-dot ${p.medali}">${p.medali === 'gold' ? 1 : 2}</span><div><b>${esc(p.nomor)} — ${esc(p.hasil.split(' · ')[0])}</b><small>${esc(p.event)} · ${esc(p.siapa)}</small></div><span class="yr">${p.tahun}</span></li>`).join('');
+    } catch (e) { console.warn('Prestasi:', e); }
+    res();
+  };
+  s.onerror = () => res(); document.head.appendChild(s); setTimeout(res, 3000);
+});
+// Kode QR profil
+function buatQR() {
+  if (!window.qrcode) return;
+  const url = 'https://syaifudinwahid.vercel.app/', q = qrcode(0, 'M'); q.addData(url); q.make();
+  const n = q.getModuleCount(), m = 2, sz = n + m * 2; let d = '';
+  for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) if (q.isDark(r, c)) d += `M${c + m} ${r + m}h1v1h-1z`;
+  document.getElementById('qbox').innerHTML = `<svg viewBox="0 0 ${sz} ${sz}" shape-rendering="crispEdges"><rect width="${sz}" height="${sz}" fill="#fff"/><path d="${d}" fill="#1f1416"/></svg>`;
+  document.getElementById('qdl').onclick = () => {
+    const S = 1200, cv = document.createElement('canvas'); cv.width = S; cv.height = S + 170; const g = cv.getContext('2d');
+    g.fillStyle = '#fff'; g.fillRect(0, 0, cv.width, cv.height);
+    const k = S / sz; g.fillStyle = '#1f1416';
+    for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) if (q.isDark(r, c)) g.fillRect(Math.floor((c + m) * k), Math.floor((r + m) * k), Math.ceil(k), Math.ceil(k));
+    g.fillStyle = '#b3262d'; g.textAlign = 'center'; g.font = 'italic 600 64px Georgia,serif'; g.fillText('Coach Syaifudin Wahid, M.Pd', S / 2, S + 60);
+    g.fillStyle = '#6b5f5a'; g.font = '600 44px system-ui,sans-serif'; g.fillText('syaifudinwahid.vercel.app', S / 2, S + 128);
+    const a = document.createElement('a'); a.download = 'QR-Coach-Syaifudin-Wahid.png'; a.href = cv.toDataURL('image/png'); a.click();
+  };
+}
+window.qrcode ? buatQR() : addEventListener('DOMContentLoaded', buatQR);
+
 (window.cmsReady||Promise.resolve()).then(()=>{
 document.getElementById('yr').textContent = new Date().getFullYear();
 
